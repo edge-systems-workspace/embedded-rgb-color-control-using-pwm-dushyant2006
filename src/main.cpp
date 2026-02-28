@@ -24,4 +24,31 @@
 
 
 void loop() {
-}
+
+        // -------- DIGITAL MODE --------
+        digitalWrite(RED_PIN, HIGH);
+        delay(1000);
+
+        digitalWrite(RED_PIN, LOW);
+        delay(1000);
+
+        // -------- PWM MODE --------
+
+        // Red
+        analogWrite(RED_PIN, 255);
+        analogWrite(GREEN_PIN, 0);
+        analogWrite(BLUE_PIN, 0);
+        delay(1000);
+
+        // Green
+        analogWrite(RED_PIN, 0);
+        analogWrite(GREEN_PIN, 255);
+        analogWrite(BLUE_PIN, 0);
+        delay(1000);
+
+        // Blue
+        analogWrite(RED_PIN, 0);
+        analogWrite(GREEN_PIN, 0);
+        analogWrite(BLUE_PIN, 255);
+        delay(1000);
+    }
